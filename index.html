@@ -6,10 +6,10 @@
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <meta
-            name="description"
-            content="Documentation for the Kittn API"
+            name="Priyam Sarkar"
+            content="OP notes"
         >
-    <title>API Reference</title>
+    <title>Priyam Sarkar</title>
 
     <style media="screen">
       .highlight table td { padding: 5px; }
@@ -319,19 +319,13 @@
             <a href="#op-in-the-chat-box" class="toc-h1 toc-link" data-title="OP IN THE CHAT BOX">OP IN THE CHAT BOX</a>
           </li>
           <li>
-            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
+            <a href="#welcome" class="toc-h1 toc-link" data-title="😎Welcome">😎Welcome</a>
           </li>
           <li>
-            <a href="#kittens" class="toc-h1 toc-link" data-title="Kittens">Kittens</a>
+            <a href="#my-projec" class="toc-h1 toc-link" data-title="My Projec">My Projec</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-all-kittens" class="toc-h2 toc-link" data-title="Get All Kittens">Get All Kittens</a>
-                  </li>
-                  <li>
-                    <a href="#get-a-specific-kitten" class="toc-h2 toc-link" data-title="Get a Specific Kitten">Get a Specific Kitten</a>
-                  </li>
-                  <li>
-                    <a href="#delete-a-specific-kitten" class="toc-h2 toc-link" data-title="Delete a Specific Kitten">Delete a Specific Kitten</a>
+                    <a href="#gestokar" class="toc-h2 toc-link" data-title="Gestokar">Gestokar</a>
                   </li>
               </ul>
           </li>
@@ -348,184 +342,591 @@
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='op-in-the-chat-box'>OP IN THE CHAT BOX</h1>
-<p>MY name is priyam sarkar</p>
+<p>MY name is Priyam Sarkar</p>
 
-<p>We have language bindings in Shell, Ruby, Python, and JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
+<p><bgcolor = cyan></p>
+<h1 id='welcome'>😎Welcome</h1>
+<p>Hello and welcome to my free coding site.</p>
+<h1 id='my-projec'>My Projec</h1><h2 id='gestokar'>Gestokar</h2>
+<ul>
+<li><h4 id='abstract'>Abstract</h4>
+<p>The proposed work presents a Hand Gesture Controlled car which can be controlled by simple
+hand gesture using Arduino-Nano and IMU sensors instead of using button control. The robot
+and the gesture instrument are connected wirelessly through radio waves. User can interact with
+the car/machine in a more friendly way due to the wireless communication. Here the most
+significant device is IMU sensor. The hand position is sensed and the coordinates generated is
+considered as the parameter and if necessary conditions are met, the statement prescribed in the
+Arduino code is executed and the direction of the car is changed accordingly. The data is
+transmitted wirelessly via a trans-receiver module to a microcontroller and the received signals
+are then classified to one of six control commands for navigating a car-robot.
+By the impact of this project, it will benefit various areas including applications in military, home
+automation and high security bases.</p></li>
+<li><h4 id='keywords-arduino-technology-gesture-wireless-module'>Keywords: Arduino Technology, Gesture, wireless module.</h4></li>
+<li><h4 id='introduction'>Introduction</h4>
+<p>Wireless cars/machines are playing an essential role in automation across all sectors like in
+construction, military, medical, manufacturing, etc. In many fields, it is very risky and
+complicated to handle the machines through switches or remote and sometimes the operator may
+get confused in the switch control and button control, so this new concept of gesture control is
+introduced to control the machine/car with the movement of hand. Gesture means the movement
+of the part of the body to express an idea or a meaning. The main gesture movement or
+communication is done through a hand or head. The 2 parts of the body (hand and arm) have
+most attention among those people who study gestures in fact much reference for gesture
+recognition. Gesture recognition enables humans to interact and communicate with the machine
+without any mechanical devices. With the help of a data glove which contains an accelerometer
+(inertial sensors) the human gesture are sent. Data gloves are the devices worn on the hands in
+order to measure their position and their movements. Inertial sensors are used to recognize the
+human gestures and those actions are replicated by the car/machine. An Arduino-Nano
+microcontroller is used in the transmitter section and is coded in such a way such that it does the
+required actions for the human gestures. The Arduino-Nano reads the analogue output values
+from the accelerometer and converts the analogue value to respective digital value. This system
+also uses a remote control system and nRF24L01 trans-receiver mode for wire-less
+communication. Instead of working with both accelerometers and gyroscopes separately since
+they are not as accurate as when they are combined, here MPU6050 module is used as an inertial
+sensor based on MEMS (Micro Electro Mechanical Systems) technology in which both the
+accelerometer and the gyroscope is integrated inside a single chip. Instead of using separate
+transmitter and receiver module we are using nRF24L01 which is a single chip 2.4GHz transreceiver module. In this chip encoder, decoder, transmitter and receiver are inbuilt.
+In this system, a gesture driven vehicle is developed, in which how the vehicle is moving i.e.,
+control and handling is depend on user gesture. This control make switching system more
+3 | P a g e
+real and give more freedom to user and has wide applications in medical (gesture controlled
+wheel chair for disabled people) and military applications.</p></li>
+<li><h4 id='literature-survey'>Literature survey:</h4>
+<p>The paper 3 focuses on the development of hand gestures recognition sensor based on
+accelerometer and gyroscope for controlling arm of underwater remotely operated robots. In this
+proposed work hand gesture sensor depends on accelerometer and gyroscope. Gyroscope is the
+sensor which is used to capture the position of the operator hand when he is working in
+underwater operated vehicle and it is attached with a hand. This system has two main parts,
+ground station and aquatic remotely operated robot arm. This device can be operated without any
+training. Underwater application can be easily done with this device.
+The paper 1 ,2 focuses on the development of the robotic Arm by using Flex Sensor, and DC
+motor which are connected to the Arduino Uno. It is controlled by processing software. These
+robotic Arm are cheap and easily available which makes it free from unnecessary wire
+connection, reducing its complexity. But still there is a requirement of adding new ideas and
+functionality.
+In paper 4 superior approach is used for adjusting the clap sound gesture commands from
+kinetic sensor related to the computer and mobile phone is hooked up via RF hyper link. The
+hardware is predicted on microcontroller code to keep away from unessential motion of the
+robots. The clap sound is to actuate the gesture tracking mode to transport the robot and
+deactivate the gesture monitoring mode after last ceasing the robot.
+The paper 5 explain about the implementation and design of gesture controlled robot by using
+Flex Sensor, Ultra sonic Sensor, and accelerometer connected to Microcontroller. The research
+paper describes the Robot, which is controlled wirelessly via Bluetooth via hand glove. The
+project is developed by using sensor, LCD Display, a Bluetooth Device, NXT Microcontroller,
+Motor and Camera.</p></li>
+<li><h4 id='objectives'>Objectives:</h4>
+<p>The objective of the project is to control the direction of movement of simple car/machine with
+hand gestures. In this project, user is also able to control motions of the car by wearing controller
+glove and performing predefined gestures. Arduino microcontroller and MPU6050 are the two
+major components. MPU6050 signals are received and assisted with wired correspondence and
+the car moves depending upon the signal made by our hand. In this project we describe
+approximately the gesture manage car which may be managed through our everyday hand gesture
+and the program is designed by using Arduino-Nano.</p></li>
+<li><h4 id='methodology'>Methodology:</h4>
+<p>The project is categorised into 2 sections that are “transmitter section and another is receiver
+section”.
+The transmitter section consists of one Arduino Nano, one MPU6050 module and two RF transreceiver (nRF24L01) module. The receiver section includes RF receiver module, one motor
+driver IC.
+When the car/machine is powered on, the transmitter part, which consists of Arduino-Nano takes
+the analog output values and convert analog value to the respective digital value and will
+continuously monitor the MPU6050 sensor.
+Based on the orientation of the MPU6050 sensor, this data is captured by the Arduino, which
+then transmits a corresponding data to the trans-receiver nRF24L01 module.
+At the receiver section, the trans-receiver nRF24L01 module receives the data and this data is
+fed to the motor driver IC. Based on the data, the movement of the motors occurs, and hence the
+movement of the car is defined.
+Based on the input, the car/machine will behave as follows:
+ Moves in forward direction
+ Moves in reverse direction
+ It can even turn left or right while moving forward or in reverse direction
+ On the spot left or right turn to pass through the narrow space
+ We have also added head light, back light and turning lights</p></li>
+<li><h3 id='block-diagram'>Block Diagram:</h3></li>
+<li><h4 id='transmitter-code'>Transmitter code</h4></li>
+</ul>
+<div class="highlight"><pre class="highlight cpp tab-cpp"><code><span class="cp">#include</span><span class="cpf">&lt;SPI.h&gt;</span><span class="cp">
+#include</span><span class="cpf">&lt;RF24.h&gt;</span><span class="cp">
+#include</span><span class="cpf">&lt;nrf24L01.h&gt;</span><span class="cp">
+</span>
+<span class="cp">#include</span> <span class="cpf">&lt;Adafruit_MPU6050.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;Adafruit_Sensor.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;Wire.h&gt;</span><span class="cp">
+</span>
+<span class="n">Adafruit_MPU6050</span> <span class="n">mpu</span><span class="p">;</span>
 
-<p>This example API documentation page was created with <a href="https://github.com/slatedocs/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&#39;s documentation.</p>
-<h1 id='authentication'>Authentication</h1>
-<blockquote>
-<p>To authorize, use this code:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<span class="n">RF24</span> <span class="nf">radio</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">);</span> <span class="c1">// object of class rf24 with object name radio with parameters CE and CSN</span>
+<span class="k">const</span> <span class="n">byte</span> <span class="n">address</span><span class="p">[]</span><span class="o">=</span><span class="s">"00001"</span><span class="p">;</span> <span class="c1">// 5 letter character</span>
+<span class="kt">float</span> <span class="n">sndmpu</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+<span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// put your setup code here, to run once:</span>
+<span class="n">radio</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span>
+<span class="n">radio</span><span class="p">.</span><span class="n">openWritingPipe</span><span class="p">(</span><span class="n">address</span><span class="p">);</span>
+<span class="n">radio</span><span class="p">.</span><span class="n">setPALevel</span><span class="p">(</span><span class="n">RF24_PA_MIN</span><span class="p">);</span>
+<span class="n">radio</span><span class="p">.</span><span class="n">stopListening</span><span class="p">();</span>
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="p">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
-curl <span class="s2">"api_endpoint_here"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
 
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
+<span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
+  <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">Serial</span><span class="p">)</span>
+    <span class="n">delay</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span> <span class="c1">// will pause Zero, Leonardo, etc until serial console opens</span>
+
+  <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Adafruit MPU6050 test!"</span><span class="p">);</span>
+
+  <span class="c1">// Try to initialize!</span>
+  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">mpu</span><span class="p">.</span><span class="n">begin</span><span class="p">())</span> <span class="p">{</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Failed to find MPU6050 chip"</span><span class="p">);</span>
+    <span class="k">while</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">delay</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"MPU6050 Found!"</span><span class="p">);</span>
+
+  <span class="n">mpu</span><span class="p">.</span><span class="n">setAccelerometerRange</span><span class="p">(</span><span class="n">MPU6050_RANGE_8_G</span><span class="p">);</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">"Accelerometer range set to: "</span><span class="p">);</span>
+  <span class="k">switch</span> <span class="p">(</span><span class="n">mpu</span><span class="p">.</span><span class="n">getAccelerometerRange</span><span class="p">())</span> <span class="p">{</span>
+  <span class="k">case</span> <span class="n">MPU6050_RANGE_2_G</span><span class="p">:</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"+-2G"</span><span class="p">);</span>
+    <span class="k">break</span><span class="p">;</span>
+  <span class="k">case</span> <span class="n">MPU6050_RANGE_4_G</span><span class="p">:</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"+-4G"</span><span class="p">);</span>
+    <span class="k">break</span><span class="p">;</span>
+  <span class="k">case</span> <span class="n">MPU6050_RANGE_8_G</span><span class="p">:</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"+-8G"</span><span class="p">);</span>
+    <span class="k">break</span><span class="p">;</span>
+  <span class="k">case</span> <span class="n">MPU6050_RANGE_16_G</span><span class="p">:</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"+-16G"</span><span class="p">);</span>
+    <span class="k">break</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="n">mpu</span><span class="p">.</span><span class="n">setGyroRange</span><span class="p">(</span><span class="n">MPU6050_RANGE_500_DEG</span><span class="p">);</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">"Gyro range set to: "</span><span class="p">);</span>
+  <span class="k">switch</span> <span class="p">(</span><span class="n">mpu</span><span class="p">.</span><span class="n">getGyroRange</span><span class="p">())</span> <span class="p">{</span>
+  <span class="k">case</span> <span class="n">MPU6050_RANGE_250_DEG</span><span class="p">:</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"+- 250 deg/s"</span><span class="p">);</span>
+    <span class="k">break</span><span class="p">;</span>
+  <span class="k">case</span> <span class="n">MPU6050_RANGE_500_DEG</span><span class="p">:</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"+- 500 deg/s"</span><span class="p">);</span>
+    <span class="k">break</span><span class="p">;</span>
+  <span class="k">case</span> <span class="n">MPU6050_RANGE_1000_DEG</span><span class="p">:</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"+- 1000 deg/s"</span><span class="p">);</span>
+    <span class="k">break</span><span class="p">;</span>
+  <span class="k">case</span> <span class="n">MPU6050_RANGE_2000_DEG</span><span class="p">:</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"+- 2000 deg/s"</span><span class="p">);</span>
+    <span class="k">break</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="n">mpu</span><span class="p">.</span><span class="n">setFilterBandwidth</span><span class="p">(</span><span class="n">MPU6050_BAND_21_HZ</span><span class="p">);</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">"Filter bandwidth set to: "</span><span class="p">);</span>
+  <span class="k">switch</span> <span class="p">(</span><span class="n">mpu</span><span class="p">.</span><span class="n">getFilterBandwidth</span><span class="p">())</span> <span class="p">{</span>
+  <span class="k">case</span> <span class="n">MPU6050_BAND_260_HZ</span><span class="p">:</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"260 Hz"</span><span class="p">);</span>
+    <span class="k">break</span><span class="p">;</span>
+  <span class="k">case</span> <span class="n">MPU6050_BAND_184_HZ</span><span class="p">:</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"184 Hz"</span><span class="p">);</span>
+    <span class="k">break</span><span class="p">;</span>
+  <span class="k">case</span> <span class="n">MPU6050_BAND_94_HZ</span><span class="p">:</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"94 Hz"</span><span class="p">);</span>
+    <span class="k">break</span><span class="p">;</span>
+  <span class="k">case</span> <span class="n">MPU6050_BAND_44_HZ</span><span class="p">:</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"44 Hz"</span><span class="p">);</span>
+    <span class="k">break</span><span class="p">;</span>
+  <span class="k">case</span> <span class="n">MPU6050_BAND_21_HZ</span><span class="p">:</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"21 Hz"</span><span class="p">);</span>
+    <span class="k">break</span><span class="p">;</span>
+  <span class="k">case</span> <span class="n">MPU6050_BAND_10_HZ</span><span class="p">:</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"10 Hz"</span><span class="p">);</span>
+    <span class="k">break</span><span class="p">;</span>
+  <span class="k">case</span> <span class="n">MPU6050_BAND_5_HZ</span><span class="p">:</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"5 Hz"</span><span class="p">);</span>
+    <span class="k">break</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">""</span><span class="p">);</span>
+  <span class="n">delay</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// put your main code here, to run repeatedly:</span>
+
+    <span class="cm">/* Get new sensor events with the readings */</span>
+  <span class="n">sensors_event_t</span> <span class="n">a</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">temp</span><span class="p">;</span>
+  <span class="n">mpu</span><span class="p">.</span><span class="n">getEvent</span><span class="p">(</span><span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">g</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">temp</span><span class="p">);</span>
+
+  <span class="cm">/* Print out the values */</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">"Acceleration X: "</span><span class="p">);</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">acceleration</span><span class="p">.</span><span class="n">x</span><span class="p">);</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">", Y: "</span><span class="p">);</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">acceleration</span><span class="p">.</span><span class="n">y</span><span class="p">);</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">", Z: "</span><span class="p">);</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">acceleration</span><span class="p">.</span><span class="n">z</span><span class="p">);</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">" m/s^2"</span><span class="p">);</span>
+
+  <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">"Rotation X: "</span><span class="p">);</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">g</span><span class="p">.</span><span class="n">gyro</span><span class="p">.</span><span class="n">x</span><span class="p">);</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">", Y: "</span><span class="p">);</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">g</span><span class="p">.</span><span class="n">gyro</span><span class="p">.</span><span class="n">y</span><span class="p">);</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">", Z: "</span><span class="p">);</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">g</span><span class="p">.</span><span class="n">gyro</span><span class="p">.</span><span class="n">z</span><span class="p">);</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">" rad/s"</span><span class="p">);</span>
+
+  <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">"Temperature: "</span><span class="p">);</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">temp</span><span class="p">.</span><span class="n">temperature</span><span class="p">);</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">" degC"</span><span class="p">);</span>
+
+  <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">""</span><span class="p">);</span>
+  <span class="n">delay</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span>
+
+
+<span class="n">sndmpu</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="n">a</span><span class="p">.</span><span class="n">acceleration</span><span class="p">.</span><span class="n">z</span><span class="p">;</span>
+<span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">"sendmpudata_z: "</span><span class="p">);</span>
+<span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">sndmpu</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+<span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">();</span>
+
+<span class="n">sndmpu</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="n">a</span><span class="p">.</span><span class="n">acceleration</span><span class="p">.</span><span class="n">y</span><span class="p">;</span>
+<span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">"sendmpudata_y: "</span><span class="p">);</span>
+<span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">sndmpu</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+<span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">();</span>
+
+
+<span class="n">radio</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sndmpu</span><span class="p">,</span><span class="k">sizeof</span><span class="p">(</span><span class="n">sndmpu</span><span class="p">));</span>
+<span class="p">}</span>
 </code></pre></div>
-<blockquote>
-<p>Make sure to replace <code>meowmeowmeow</code> with your API key.</p>
-</blockquote>
+<ul>
+<li> #### Recevier Code</li>
+</ul>
+<div class="highlight"><pre class="highlight cpp tab-cpp"><code><span class="cp">#include</span><span class="cpf">&lt;SPI.h&gt;</span><span class="cp">
+#include</span><span class="cpf">&lt;RF24.h&gt;</span><span class="cp">
+#include</span><span class="cpf">&lt;nRF24L01.h&gt;</span><span class="cp">
+</span>
+<span class="n">RF24</span> <span class="nf">radio</span><span class="p">(</span><span class="n">D4</span><span class="p">,</span><span class="n">D2</span><span class="p">);</span> <span class="c1">// CE and CSN of esp8266</span>
+<span class="k">const</span> <span class="n">byte</span> <span class="n">address1</span><span class="p">[]</span><span class="o">=</span><span class="s">"00001"</span><span class="p">;</span>
+<span class="kt">float</span> <span class="n">recvmpudata</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
 
-<p>Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers">developer portal</a>.</p>
+<span class="kt">int</span> <span class="n">IN1</span><span class="o">=</span><span class="n">D0</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">IN2</span><span class="o">=</span><span class="n">D1</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">IN3</span><span class="o">=</span><span class="n">D3</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">IN4</span><span class="o">=</span><span class="n">D8</span><span class="p">;</span>
 
-<p>Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
+<span class="kt">int</span> <span class="n">ena</span><span class="o">=</span><span class="n">D9</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">enb</span><span class="o">=</span><span class="n">D10</span><span class="p">;</span>
 
-<p><code>Authorization: meowmeowmeow</code></p>
+<span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// put your setup code here, to run once:</span>
 
-<aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
-</aside>
-<h1 id='kittens'>Kittens</h1><h2 id='get-all-kittens'>Get All Kittens</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span>
-</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+<span class="n">pinMode</span><span class="p">(</span><span class="n">IN1</span><span class="p">,</span><span class="n">OUTPUT</span><span class="p">);</span>
+<span class="n">pinMode</span><span class="p">(</span><span class="n">IN2</span><span class="p">,</span><span class="n">OUTPUT</span><span class="p">);</span>
+<span class="n">pinMode</span><span class="p">(</span><span class="n">IN3</span><span class="p">,</span><span class="n">OUTPUT</span><span class="p">);</span>
+<span class="n">pinMode</span><span class="p">(</span><span class="n">IN4</span><span class="p">,</span><span class="n">OUTPUT</span><span class="p">);</span>
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="p">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="n">kittens</span><span class="p">.</span><span class="n">get</span><span class="p">()</span>
-</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
+<span class="n">pinMode</span><span class="p">(</span><span class="n">ena</span><span class="p">,</span><span class="n">OUTPUT</span><span class="p">);</span>
+<span class="n">pinMode</span><span class="p">(</span><span class="n">enb</span><span class="p">,</span><span class="n">OUTPUT</span><span class="p">);</span>
 
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="kd">get</span><span class="p">();</span>
+
+<span class="n">radio</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span>
+<span class="n">radio</span><span class="p">.</span><span class="n">openReadingPipe</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">address1</span><span class="p">);</span><span class="c1">// reading pipe range 0 to 5</span>
+<span class="n">radio</span><span class="p">.</span><span class="n">setPALevel</span><span class="p">(</span><span class="n">RF24_PA_MIN</span><span class="p">);</span>
+<span class="n">radio</span><span class="p">.</span><span class="n">startListening</span><span class="p">();</span>
+
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// put your main code here, to run repeatedly:</span>
+<span class="k">if</span><span class="p">(</span><span class="n">radio</span><span class="p">.</span><span class="n">available</span><span class="p">()){</span>
+  <span class="n">radio</span><span class="p">.</span><span class="n">read</span><span class="p">(</span><span class="o">&amp;</span><span class="n">recvmpudata</span><span class="p">,</span><span class="k">sizeof</span><span class="p">(</span><span class="n">recvmpudata</span><span class="p">));</span>
+
+<span class="c1">//forward</span>
+<span class="k">if</span><span class="p">((</span><span class="n">recvmpudata</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="o">-</span><span class="mf">10.00</span><span class="p">)</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="n">recvmpudata</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="o">-</span><span class="mf">4.00</span><span class="p">)){</span>
+<span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"forward"</span><span class="p">);</span>
+<span class="n">digitalWrite</span><span class="p">(</span><span class="n">ena</span><span class="p">,</span><span class="n">HIGH</span><span class="p">);</span>
+<span class="n">digitalWrite</span><span class="p">(</span><span class="n">enb</span><span class="p">,</span><span class="n">HIGH</span><span class="p">);</span>
+
+<span class="n">digitalWrite</span><span class="p">(</span><span class="n">IN1</span><span class="p">,</span><span class="n">HIGH</span><span class="p">);</span>
+<span class="n">digitalWrite</span><span class="p">(</span><span class="n">IN2</span><span class="p">,</span><span class="n">LOW</span><span class="p">);</span>
+<span class="n">digitalWrite</span><span class="p">(</span><span class="n">IN3</span><span class="p">,</span><span class="n">HIGH</span><span class="p">);</span>
+<span class="n">digitalWrite</span><span class="p">(</span><span class="n">IN4</span><span class="p">,</span><span class="n">LOW</span><span class="p">);</span>
+
+<span class="n">delay</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">//backward</span>
+<span class="k">else</span> <span class="k">if</span><span class="p">((</span><span class="n">recvmpudata</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="o">+</span><span class="mf">4.00</span><span class="p">)</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="n">recvmpudata</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="o">+</span><span class="mf">10.00</span><span class="p">)){</span>
+<span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"backward"</span><span class="p">);</span>
+<span class="n">digitalWrite</span><span class="p">(</span><span class="n">ena</span><span class="p">,</span><span class="n">HIGH</span><span class="p">);</span>
+<span class="n">digitalWrite</span><span class="p">(</span><span class="n">enb</span><span class="p">,</span><span class="n">HIGH</span><span class="p">);</span>
+
+<span class="n">digitalWrite</span><span class="p">(</span><span class="n">IN1</span><span class="p">,</span><span class="n">LOW</span><span class="p">);</span>
+<span class="n">digitalWrite</span><span class="p">(</span><span class="n">IN2</span><span class="p">,</span><span class="n">HIGH</span><span class="p">);</span>
+<span class="n">digitalWrite</span><span class="p">(</span><span class="n">IN3</span><span class="p">,</span><span class="n">LOW</span><span class="p">);</span>
+<span class="n">digitalWrite</span><span class="p">(</span><span class="n">IN4</span><span class="p">,</span><span class="n">HIGH</span><span class="p">);</span>
+
+<span class="n">delay</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">//left</span>
+<span class="k">else</span> <span class="k">if</span><span class="p">((</span><span class="n">recvmpudata</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="o">-</span><span class="mf">10.00</span><span class="p">)</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="n">recvmpudata</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="o">-</span><span class="mf">4.00</span><span class="p">)){</span>
+<span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"left"</span><span class="p">);</span>
+<span class="n">digitalWrite</span><span class="p">(</span><span class="n">ena</span><span class="p">,</span><span class="n">HIGH</span><span class="p">);</span>
+<span class="n">digitalWrite</span><span class="p">(</span><span class="n">enb</span><span class="p">,</span><span class="n">HIGH</span><span class="p">);</span>
+
+<span class="n">digitalWrite</span><span class="p">(</span><span class="n">IN1</span><span class="p">,</span><span class="n">LOW</span><span class="p">);</span>
+<span class="n">digitalWrite</span><span class="p">(</span><span class="n">IN2</span><span class="p">,</span><span class="n">LOW</span><span class="p">);</span>
+<span class="n">digitalWrite</span><span class="p">(</span><span class="n">IN3</span><span class="p">,</span><span class="n">HIGH</span><span class="p">);</span>
+<span class="n">digitalWrite</span><span class="p">(</span><span class="n">IN4</span><span class="p">,</span><span class="n">LOW</span><span class="p">);</span>
+
+<span class="n">delay</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">//right</span>
+<span class="k">else</span> <span class="k">if</span><span class="p">((</span><span class="n">recvmpudata</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="o">+</span><span class="mf">4.00</span><span class="p">)</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="n">recvmpudata</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="o">+</span><span class="mf">10.00</span><span class="p">)){</span>
+<span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"right"</span><span class="p">);</span>
+<span class="n">digitalWrite</span><span class="p">(</span><span class="n">ena</span><span class="p">,</span><span class="n">HIGH</span><span class="p">);</span>
+<span class="n">digitalWrite</span><span class="p">(</span><span class="n">enb</span><span class="p">,</span><span class="n">HIGH</span><span class="p">);</span>
+
+<span class="n">digitalWrite</span><span class="p">(</span><span class="n">IN1</span><span class="p">,</span><span class="n">HIGH</span><span class="p">);</span>
+<span class="n">digitalWrite</span><span class="p">(</span><span class="n">IN2</span><span class="p">,</span><span class="n">LOW</span><span class="p">);</span>
+<span class="n">digitalWrite</span><span class="p">(</span><span class="n">IN3</span><span class="p">,</span><span class="n">LOW</span><span class="p">);</span>
+<span class="n">digitalWrite</span><span class="p">(</span><span class="n">IN4</span><span class="p">,</span><span class="n">LOW</span><span class="p">);</span>
+
+<span class="n">delay</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">//stop</span>
+<span class="k">else</span> <span class="k">if</span><span class="p">((</span><span class="n">recvmpudata</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="o">-</span><span class="mf">5.00</span><span class="p">)</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="n">recvmpudata</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="o">+</span><span class="mf">5.00</span><span class="p">)){</span>
+<span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"stop"</span><span class="p">);</span>
+<span class="n">digitalWrite</span><span class="p">(</span><span class="n">ena</span><span class="p">,</span><span class="n">LOW</span><span class="p">);</span>
+<span class="n">digitalWrite</span><span class="p">(</span><span class="n">enb</span><span class="p">,</span><span class="n">LOW</span><span class="p">);</span>
+
+<span class="n">digitalWrite</span><span class="p">(</span><span class="n">IN1</span><span class="p">,</span><span class="n">LOW</span><span class="p">);</span>
+<span class="n">digitalWrite</span><span class="p">(</span><span class="n">IN2</span><span class="p">,</span><span class="n">LOW</span><span class="p">);</span>
+<span class="n">digitalWrite</span><span class="p">(</span><span class="n">IN3</span><span class="p">,</span><span class="n">LOW</span><span class="p">);</span>
+<span class="n">digitalWrite</span><span class="p">(</span><span class="n">IN4</span><span class="p">,</span><span class="n">LOW</span><span class="p">);</span>
+
+<span class="n">delay</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">else</span><span class="p">{</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"!!!!!!!!!!Wrong Input or Output!!!!!!!!!!"</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre></div>
-<p>This endpoint retrieves all kittens.</p>
-<h3 id='http-request'>HTTP Request</h3>
-<p><code>GET http://example.com/api/kittens</code></p>
-<h3 id='query-parameters'>Query Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>include_cats</td>
-<td>false</td>
-<td>If set to true, the result will also include cats.</td>
-</tr>
-<tr>
-<td>available</td>
-<td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
-</tr>
-</tbody></table>
-
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
-<h2 id='get-a-specific-kitten'>Get a Specific Kitten</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="p">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="n">kittens</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</code></pre></div>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div>
-<p>This endpoint retrieves a specific kitten.</p>
-
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
-<h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ID</td>
-<td>The ID of the kitten to retrieve</td>
-</tr>
-</tbody></table>
-<h2 id='delete-a-specific-kitten'>Delete a Specific Kitten</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="p">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="n">kittens</span><span class="p">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span> <span class="se">\</span>
-  <span class="nt">-X</span> DELETE <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</code></pre></div>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">":("</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div>
-<p>This endpoint deletes a specific kitten.</p>
-<h3 id='http-request-3'>HTTP Request</h3>
-<p><code>DELETE http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-2'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ID</td>
-<td>The ID of the kitten to delete</td>
-</tr>
-</tbody></table>
+<p>//
+//
+//
+//This example API documentation page was created with <a href="https://github.com/slatedocs/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&#39;s documentation.
+//
+//# Authentication
+//
+//&gt; To authorize, use this code:
+//
+//<code>ruby
+//require &#39;kittn&#39;
+//
+//api = Kittn::APIClient.authorize!(&#39;meowmeowmeow&#39;)
+//</code>
+//
+//<code>python
+//import kittn
+//
+//api = kittn.authorize(&#39;meowmeowmeow&#39;)
+//</code>
+//
+//<code>shell
+//# With shell, you can just pass the correct header with each request
+//curl &quot;api_endpoint_here&quot; \
+//  -H &quot;Authorization: meowmeowmeow&quot;
+//</code>
+//
+//<code>javascript
+//const kittn = require(&#39;kittn&#39;);
+//
+//let api = kittn.authorize(&#39;meowmeowmeow&#39;);
+//</code>
+//
+//&gt; Make sure to replace <code>meowmeowmeow</code> with your API key.
+//
+//Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers">developer portal</a>.
+//
+//Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:
+//
+//<code>Authorization: meowmeowmeow</code>
+//
+//<aside class="notice">
+//You must replace <code>meowmeowmeow</code> with your personal API key.
+//</aside>
+//
+//# Kittens
+//
+//## Get All Kittens
+//
+//<code>ruby
+//require &#39;kittn&#39;
+//
+//api = Kittn::APIClient.authorize!(&#39;meowmeowmeow&#39;)
+//api.kittens.get
+//</code>
+//
+//<code>python
+//import kittn
+//
+//api = kittn.authorize(&#39;meowmeowmeow&#39;)
+//api.kittens.get()
+//</code>
+//
+//<code>shell
+//curl &quot;http://example.com/api/kittens&quot; \
+//  -H &quot;Authorization: meowmeowmeow&quot;
+//</code>
+//
+//<code>javascript
+//const kittn = require(&#39;kittn&#39;);
+//
+//let api = kittn.authorize(&#39;meowmeowmeow&#39;);
+//let kittens = api.kittens.get();
+//</code>
+//
+//&gt; The above command returns JSON structured like this:
+//
+//<code>json
+//[
+//  {
+//    &quot;id&quot;: 1,
+//    &quot;name&quot;: &quot;Fluffums&quot;,
+//    &quot;breed&quot;: &quot;calico&quot;,
+//    &quot;fluffiness&quot;: 6,
+//    &quot;cuteness&quot;: 7
+//  },
+//  {
+//    &quot;id&quot;: 2,
+//    &quot;name&quot;: &quot;Max&quot;,
+//    &quot;breed&quot;: &quot;unknown&quot;,
+//    &quot;fluffiness&quot;: 5,
+//    &quot;cuteness&quot;: 10
+//  }
+//]
+//</code>
+//
+//This endpoint retrieves all kittens.
+//
+//### HTTP Request
+//
+//<code>GET http://example.com/api/kittens</code>
+//
+//### Query Parameters
+//
+//Parameter | Default | Description
+//--------- | ------- | -----------
+//include_cats | false | If set to true, the result will also include cats.
+//available | true | If set to false, the result will include kittens that have already been adopted.
+//
+//<aside class="success">
+//Remember — a happy kitten is an authenticated kitten!
+//</aside>
+//
+//## Get a Specific Kitten
+//
+//<code>ruby
+//require &#39;kittn&#39;
+//
+//api = Kittn::APIClient.authorize!(&#39;meowmeowmeow&#39;)
+//api.kittens.get(2)
+//</code>
+//
+//<code>python
+//import kittn
+//
+//api = kittn.authorize(&#39;meowmeowmeow&#39;)
+//api.kittens.get(2)
+//</code>
+//
+//<code>shell
+//curl &quot;http://example.com/api/kittens/2&quot; \
+//  -H &quot;Authorization: meowmeowmeow&quot;
+//</code>
+//
+//<code>javascript
+//const kittn = require(&#39;kittn&#39;);
+//
+//let api = kittn.authorize(&#39;meowmeowmeow&#39;);
+//let max = api.kittens.get(2);
+//</code>
+//
+//&gt; The above command returns JSON structured like this:
+//
+//<code>json
+//{
+//  &quot;id&quot;: 2,
+//  &quot;name&quot;: &quot;Max&quot;,
+//  &quot;breed&quot;: &quot;unknown&quot;,
+//  &quot;fluffiness&quot;: 5,
+//  &quot;cuteness&quot;: 10
+//}
+//</code>
+//
+//This endpoint retrieves a specific kitten.
+//
+//<aside class="warning">Inside HTML code blocks like this one, you can&#39;t use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
+//
+//### HTTP Request
+//
+//<code>GET http://example.com/kittens/&lt;ID&gt;</code>
+//
+//### URL Parameters
+//
+//Parameter | Description
+//--------- | -----------
+//ID | The ID of the kitten to retrieve
+//
+//## Delete a Specific Kitten
+//
+//<code>ruby
+//require &#39;kittn&#39;
+//
+//api = Kittn::APIClient.authorize!(&#39;meowmeowmeow&#39;)
+//api.kittens.delete(2)
+//</code>
+//
+//<code>python
+//import kittn
+//
+//api = kittn.authorize(&#39;meowmeowmeow&#39;)
+//api.kittens.delete(2)
+//</code>
+//
+//<code>shell
+//curl &quot;http://example.com/api/kittens/2&quot; \
+//  -X DELETE \
+//  -H &quot;Authorization: meowmeowmeow&quot;
+//</code>
+//
+//<code>javascript
+//const kittn = require(&#39;kittn&#39;);
+//
+//let api = kittn.authorize(&#39;meowmeowmeow&#39;);
+//let max = api.kittens.delete(2);
+//</code>
+//
+//&gt; The above command returns JSON structured like this:
+//
+//<code>json
+//{
+//  &quot;id&quot;: 2,
+//  &quot;deleted&quot; : &quot;:(&quot;
+//}
+//</code>
+//
+//This endpoint deletes a specific kitten.
+//
+//### HTTP Request
+//
+//<code>DELETE http://example.com/kittens/&lt;ID&gt;</code>
+//
+//### URL Parameters
+//
+//Parameter | Description
+//--------- | -----------
+//ID | The ID of the kitten to delete
+//
+//</p>
 <h1 id='errors'>Errors</h1>
 <aside class="notice">
 This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
