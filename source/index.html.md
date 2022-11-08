@@ -122,7 +122,7 @@ Based on the input, the car/machine will behave as follows:
 
 * #### Transmitter code
 
-```cpp
+<code>
 #include<SPI.h>
 #include<RF24.h>
 #include<nrf24L01.h>
@@ -268,12 +268,12 @@ Serial.println();
 
 radio.write(&sndmpu,sizeof(sndmpu));
 }
-```
+</code>
 
 
 *  #### Recevier Code
 
-```cpp
+<code>
 #include<SPI.h>
 #include<RF24.h>
 #include<nRF24L01.h>
@@ -390,4 +390,4 @@ else{
 }
 }
 }
-```
+</code>
