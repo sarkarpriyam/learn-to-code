@@ -312,6 +312,33 @@
                   </li>
               </ul>
           </li>
+          <li>
+            <a href="#include" class="toc-h1 toc-link" data-title="include">include<spi.h></spi.h></a>
+          </li>
+          <li>
+            <a href="#include-2" class="toc-h1 toc-link" data-title="include">include<rf24.h></rf24.h></a>
+          </li>
+          <li>
+            <a href="#include-3" class="toc-h1 toc-link" data-title="include">include<nrf24l01.h></nrf24l01.h></a>
+          </li>
+          <li>
+            <a href="#include-4" class="toc-h1 toc-link" data-title="include ">include <adafruit_mpu6050.h></adafruit_mpu6050.h></a>
+          </li>
+          <li>
+            <a href="#include-5" class="toc-h1 toc-link" data-title="include ">include <adafruit_sensor.h></adafruit_sensor.h></a>
+          </li>
+          <li>
+            <a href="#include-6" class="toc-h1 toc-link" data-title="include ">include <wire.h></wire.h></a>
+          </li>
+          <li>
+            <a href="#include-7" class="toc-h1 toc-link" data-title="include">include<spi.h></spi.h></a>
+          </li>
+          <li>
+            <a href="#include-8" class="toc-h1 toc-link" data-title="include">include<rf24.h></rf24.h></a>
+          </li>
+          <li>
+            <a href="#include-9" class="toc-h1 toc-link" data-title="include">include<nrf24l01.h></nrf24l01.h></a>
+          </li>
       </ul>
     </div>
     <div class="page-wrapper">
@@ -417,272 +444,264 @@ Based on the input, the car/machine will behave as follows:
 <li><h3 id='block-diagram'>Block Diagram:</h3></li>
 <li><h4 id='transmitter-code'>Transmitter code</h4></li>
 </ul>
-<div class="highlight"><pre class="highlight cpp tab-cpp"><code><span class="cp">#include</span><span class="cpf">&lt;SPI.h&gt;</span><span class="cp">
-#include</span><span class="cpf">&lt;RF24.h&gt;</span><span class="cp">
-#include</span><span class="cpf">&lt;nrf24L01.h&gt;</span><span class="cp">
-</span>
-<span class="cp">#include</span> <span class="cpf">&lt;Adafruit_MPU6050.h&gt;</span><span class="cp">
-#include</span> <span class="cpf">&lt;Adafruit_Sensor.h&gt;</span><span class="cp">
-#include</span> <span class="cpf">&lt;Wire.h&gt;</span><span class="cp">
-</span>
-<span class="n">Adafruit_MPU6050</span> <span class="n">mpu</span><span class="p">;</span>
 
-<span class="n">RF24</span> <span class="nf">radio</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">);</span> <span class="c1">// object of class rf24 with object name radio with parameters CE and CSN</span>
-<span class="k">const</span> <span class="n">byte</span> <span class="n">address</span><span class="p">[]</span><span class="o">=</span><span class="s">"00001"</span><span class="p">;</span> <span class="c1">// 5 letter character</span>
-<span class="kt">float</span> <span class="n">sndmpu</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+<p><code></p>
+<h1 id='include'>include<SPI.h></h1><h1 id='include-2'>include<RF24.h></h1><h1 id='include-3'>include<nrf24L01.h></h1><h1 id='include-4'>include <Adafruit_MPU6050.h></h1><h1 id='include-5'>include <Adafruit_Sensor.h></h1><h1 id='include-6'>include <Wire.h></h1>
+<p>Adafruit_MPU6050 mpu;</p>
 
-<span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
-  <span class="c1">// put your setup code here, to run once:</span>
-<span class="n">radio</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span>
-<span class="n">radio</span><span class="p">.</span><span class="n">openWritingPipe</span><span class="p">(</span><span class="n">address</span><span class="p">);</span>
-<span class="n">radio</span><span class="p">.</span><span class="n">setPALevel</span><span class="p">(</span><span class="n">RF24_PA_MIN</span><span class="p">);</span>
-<span class="n">radio</span><span class="p">.</span><span class="n">stopListening</span><span class="p">();</span>
+<p>RF24 radio(9,10); // object of class rf24 with object name radio with parameters CE and CSN
+const byte address[]=&quot;00001&quot;; // 5 letter character
+float sndmpu[2];</p>
 
+<p>void setup() {
+  // put your setup code here, to run once:
+radio.begin();
+radio.openWritingPipe(address);
+radio.setPALevel(RF24_PA_MIN);
+radio.stopListening();</p>
 
-<span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
-  <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">Serial</span><span class="p">)</span>
-    <span class="n">delay</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span> <span class="c1">// will pause Zero, Leonardo, etc until serial console opens</span>
+<p>Serial.begin(115200);
+  while (!Serial)
+    delay(10); // will pause Zero, Leonardo, etc until serial console opens</p>
 
-  <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Adafruit MPU6050 test!"</span><span class="p">);</span>
+<p>Serial.println(&quot;Adafruit MPU6050 test!&quot;);</p>
 
-  <span class="c1">// Try to initialize!</span>
-  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">mpu</span><span class="p">.</span><span class="n">begin</span><span class="p">())</span> <span class="p">{</span>
-    <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Failed to find MPU6050 chip"</span><span class="p">);</span>
-    <span class="k">while</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
-      <span class="n">delay</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-  <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"MPU6050 Found!"</span><span class="p">);</span>
+<p>// Try to initialize!
+  if (!mpu.begin()) {
+    Serial.println(&quot;Failed to find MPU6050 chip&quot;);
+    while (1) {
+      delay(10);
+    }
+  }
+  Serial.println(&quot;MPU6050 Found!&quot;);</p>
 
-  <span class="n">mpu</span><span class="p">.</span><span class="n">setAccelerometerRange</span><span class="p">(</span><span class="n">MPU6050_RANGE_8_G</span><span class="p">);</span>
-  <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">"Accelerometer range set to: "</span><span class="p">);</span>
-  <span class="k">switch</span> <span class="p">(</span><span class="n">mpu</span><span class="p">.</span><span class="n">getAccelerometerRange</span><span class="p">())</span> <span class="p">{</span>
-  <span class="k">case</span> <span class="n">MPU6050_RANGE_2_G</span><span class="p">:</span>
-    <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"+-2G"</span><span class="p">);</span>
-    <span class="k">break</span><span class="p">;</span>
-  <span class="k">case</span> <span class="n">MPU6050_RANGE_4_G</span><span class="p">:</span>
-    <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"+-4G"</span><span class="p">);</span>
-    <span class="k">break</span><span class="p">;</span>
-  <span class="k">case</span> <span class="n">MPU6050_RANGE_8_G</span><span class="p">:</span>
-    <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"+-8G"</span><span class="p">);</span>
-    <span class="k">break</span><span class="p">;</span>
-  <span class="k">case</span> <span class="n">MPU6050_RANGE_16_G</span><span class="p">:</span>
-    <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"+-16G"</span><span class="p">);</span>
-    <span class="k">break</span><span class="p">;</span>
-  <span class="p">}</span>
-  <span class="n">mpu</span><span class="p">.</span><span class="n">setGyroRange</span><span class="p">(</span><span class="n">MPU6050_RANGE_500_DEG</span><span class="p">);</span>
-  <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">"Gyro range set to: "</span><span class="p">);</span>
-  <span class="k">switch</span> <span class="p">(</span><span class="n">mpu</span><span class="p">.</span><span class="n">getGyroRange</span><span class="p">())</span> <span class="p">{</span>
-  <span class="k">case</span> <span class="n">MPU6050_RANGE_250_DEG</span><span class="p">:</span>
-    <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"+- 250 deg/s"</span><span class="p">);</span>
-    <span class="k">break</span><span class="p">;</span>
-  <span class="k">case</span> <span class="n">MPU6050_RANGE_500_DEG</span><span class="p">:</span>
-    <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"+- 500 deg/s"</span><span class="p">);</span>
-    <span class="k">break</span><span class="p">;</span>
-  <span class="k">case</span> <span class="n">MPU6050_RANGE_1000_DEG</span><span class="p">:</span>
-    <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"+- 1000 deg/s"</span><span class="p">);</span>
-    <span class="k">break</span><span class="p">;</span>
-  <span class="k">case</span> <span class="n">MPU6050_RANGE_2000_DEG</span><span class="p">:</span>
-    <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"+- 2000 deg/s"</span><span class="p">);</span>
-    <span class="k">break</span><span class="p">;</span>
-  <span class="p">}</span>
+<p>mpu.setAccelerometerRange(MPU6050_RANGE_8_G);
+  Serial.print(&quot;Accelerometer range set to: &quot;);
+  switch (mpu.getAccelerometerRange()) {
+  case MPU6050_RANGE_2_G:
+    Serial.println(&quot;+-2G&quot;);
+    break;
+  case MPU6050_RANGE_4_G:
+    Serial.println(&quot;+-4G&quot;);
+    break;
+  case MPU6050_RANGE_8_G:
+    Serial.println(&quot;+-8G&quot;);
+    break;
+  case MPU6050_RANGE_16_G:
+    Serial.println(&quot;+-16G&quot;);
+    break;
+  }
+  mpu.setGyroRange(MPU6050_RANGE_500_DEG);
+  Serial.print(&quot;Gyro range set to: &quot;);
+  switch (mpu.getGyroRange()) {
+  case MPU6050_RANGE_250_DEG:
+    Serial.println(&quot;+- 250 deg/s&quot;);
+    break;
+  case MPU6050_RANGE_500_DEG:
+    Serial.println(&quot;+- 500 deg/s&quot;);
+    break;
+  case MPU6050_RANGE_1000_DEG:
+    Serial.println(&quot;+- 1000 deg/s&quot;);
+    break;
+  case MPU6050_RANGE_2000_DEG:
+    Serial.println(&quot;+- 2000 deg/s&quot;);
+    break;
+  }</p>
 
-  <span class="n">mpu</span><span class="p">.</span><span class="n">setFilterBandwidth</span><span class="p">(</span><span class="n">MPU6050_BAND_21_HZ</span><span class="p">);</span>
-  <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">"Filter bandwidth set to: "</span><span class="p">);</span>
-  <span class="k">switch</span> <span class="p">(</span><span class="n">mpu</span><span class="p">.</span><span class="n">getFilterBandwidth</span><span class="p">())</span> <span class="p">{</span>
-  <span class="k">case</span> <span class="n">MPU6050_BAND_260_HZ</span><span class="p">:</span>
-    <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"260 Hz"</span><span class="p">);</span>
-    <span class="k">break</span><span class="p">;</span>
-  <span class="k">case</span> <span class="n">MPU6050_BAND_184_HZ</span><span class="p">:</span>
-    <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"184 Hz"</span><span class="p">);</span>
-    <span class="k">break</span><span class="p">;</span>
-  <span class="k">case</span> <span class="n">MPU6050_BAND_94_HZ</span><span class="p">:</span>
-    <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"94 Hz"</span><span class="p">);</span>
-    <span class="k">break</span><span class="p">;</span>
-  <span class="k">case</span> <span class="n">MPU6050_BAND_44_HZ</span><span class="p">:</span>
-    <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"44 Hz"</span><span class="p">);</span>
-    <span class="k">break</span><span class="p">;</span>
-  <span class="k">case</span> <span class="n">MPU6050_BAND_21_HZ</span><span class="p">:</span>
-    <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"21 Hz"</span><span class="p">);</span>
-    <span class="k">break</span><span class="p">;</span>
-  <span class="k">case</span> <span class="n">MPU6050_BAND_10_HZ</span><span class="p">:</span>
-    <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"10 Hz"</span><span class="p">);</span>
-    <span class="k">break</span><span class="p">;</span>
-  <span class="k">case</span> <span class="n">MPU6050_BAND_5_HZ</span><span class="p">:</span>
-    <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"5 Hz"</span><span class="p">);</span>
-    <span class="k">break</span><span class="p">;</span>
-  <span class="p">}</span>
+<p>mpu.setFilterBandwidth(MPU6050_BAND_21_HZ);
+  Serial.print(&quot;Filter bandwidth set to: &quot;);
+  switch (mpu.getFilterBandwidth()) {
+  case MPU6050_BAND_260_HZ:
+    Serial.println(&quot;260 Hz&quot;);
+    break;
+  case MPU6050_BAND_184_HZ:
+    Serial.println(&quot;184 Hz&quot;);
+    break;
+  case MPU6050_BAND_94_HZ:
+    Serial.println(&quot;94 Hz&quot;);
+    break;
+  case MPU6050_BAND_44_HZ:
+    Serial.println(&quot;44 Hz&quot;);
+    break;
+  case MPU6050_BAND_21_HZ:
+    Serial.println(&quot;21 Hz&quot;);
+    break;
+  case MPU6050_BAND_10_HZ:
+    Serial.println(&quot;10 Hz&quot;);
+    break;
+  case MPU6050_BAND_5_HZ:
+    Serial.println(&quot;5 Hz&quot;);
+    break;
+  }</p>
 
-  <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">""</span><span class="p">);</span>
-  <span class="n">delay</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
-<span class="p">}</span>
+<p>Serial.println(&quot;&quot;);
+  delay(100);
+}</p>
 
-<span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span>
-  <span class="c1">// put your main code here, to run repeatedly:</span>
+<p>void loop() {
+  // put your main code here, to run repeatedly:</p>
 
-    <span class="cm">/* Get new sensor events with the readings */</span>
-  <span class="n">sensors_event_t</span> <span class="n">a</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">temp</span><span class="p">;</span>
-  <span class="n">mpu</span><span class="p">.</span><span class="n">getEvent</span><span class="p">(</span><span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">g</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">temp</span><span class="p">);</span>
+<p>/* Get new sensor events with the readings */
+  sensors_event_t a, g, temp;
+  mpu.getEvent(&amp;a, &amp;g, &amp;temp);</p>
 
-  <span class="cm">/* Print out the values */</span>
-  <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">"Acceleration X: "</span><span class="p">);</span>
-  <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">acceleration</span><span class="p">.</span><span class="n">x</span><span class="p">);</span>
-  <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">", Y: "</span><span class="p">);</span>
-  <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">acceleration</span><span class="p">.</span><span class="n">y</span><span class="p">);</span>
-  <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">", Z: "</span><span class="p">);</span>
-  <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">acceleration</span><span class="p">.</span><span class="n">z</span><span class="p">);</span>
-  <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">" m/s^2"</span><span class="p">);</span>
+<p>/* Print out the values */
+  Serial.print(&quot;Acceleration X: &quot;);
+  Serial.print(a.acceleration.x);
+  Serial.print(&quot;, Y: &quot;);
+  Serial.print(a.acceleration.y);
+  Serial.print(&quot;, Z: &quot;);
+  Serial.print(a.acceleration.z);
+  Serial.println(&quot; m/s^2&quot;);</p>
 
-  <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">"Rotation X: "</span><span class="p">);</span>
-  <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">g</span><span class="p">.</span><span class="n">gyro</span><span class="p">.</span><span class="n">x</span><span class="p">);</span>
-  <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">", Y: "</span><span class="p">);</span>
-  <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">g</span><span class="p">.</span><span class="n">gyro</span><span class="p">.</span><span class="n">y</span><span class="p">);</span>
-  <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">", Z: "</span><span class="p">);</span>
-  <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">g</span><span class="p">.</span><span class="n">gyro</span><span class="p">.</span><span class="n">z</span><span class="p">);</span>
-  <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">" rad/s"</span><span class="p">);</span>
+<p>Serial.print(&quot;Rotation X: &quot;);
+  Serial.print(g.gyro.x);
+  Serial.print(&quot;, Y: &quot;);
+  Serial.print(g.gyro.y);
+  Serial.print(&quot;, Z: &quot;);
+  Serial.print(g.gyro.z);
+  Serial.println(&quot; rad/s&quot;);</p>
 
-  <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">"Temperature: "</span><span class="p">);</span>
-  <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">temp</span><span class="p">.</span><span class="n">temperature</span><span class="p">);</span>
-  <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">" degC"</span><span class="p">);</span>
+<p>Serial.print(&quot;Temperature: &quot;);
+  Serial.print(temp.temperature);
+  Serial.println(&quot; degC&quot;);</p>
 
-  <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">""</span><span class="p">);</span>
-  <span class="n">delay</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span>
+<p>Serial.println(&quot;&quot;);
+  delay(50);</p>
 
+<p>sndmpu[1]=a.acceleration.z;
+Serial.print(&quot;sendmpudata_z: &quot;);
+Serial.print(sndmpu[1]);
+Serial.println();</p>
 
-<span class="n">sndmpu</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="n">a</span><span class="p">.</span><span class="n">acceleration</span><span class="p">.</span><span class="n">z</span><span class="p">;</span>
-<span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">"sendmpudata_z: "</span><span class="p">);</span>
-<span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">sndmpu</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
-<span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">();</span>
+<p>sndmpu[0]=a.acceleration.y;
+Serial.print(&quot;sendmpudata_y: &quot;);
+Serial.print(sndmpu[0]);
+Serial.println();</p>
 
-<span class="n">sndmpu</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="n">a</span><span class="p">.</span><span class="n">acceleration</span><span class="p">.</span><span class="n">y</span><span class="p">;</span>
-<span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">"sendmpudata_y: "</span><span class="p">);</span>
-<span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">sndmpu</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
-<span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">();</span>
+<p>radio.write(&amp;sndmpu,sizeof(sndmpu));
+}
+</code></p>
 
-
-<span class="n">radio</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sndmpu</span><span class="p">,</span><span class="k">sizeof</span><span class="p">(</span><span class="n">sndmpu</span><span class="p">));</span>
-<span class="p">}</span>
-</code></pre></div>
 <ul>
 <li> #### Recevier Code</li>
 </ul>
-<div class="highlight"><pre class="highlight cpp tab-cpp"><code><span class="cp">#include</span><span class="cpf">&lt;SPI.h&gt;</span><span class="cp">
-#include</span><span class="cpf">&lt;RF24.h&gt;</span><span class="cp">
-#include</span><span class="cpf">&lt;nRF24L01.h&gt;</span><span class="cp">
-</span>
-<span class="n">RF24</span> <span class="nf">radio</span><span class="p">(</span><span class="n">D4</span><span class="p">,</span><span class="n">D2</span><span class="p">);</span> <span class="c1">// CE and CSN of esp8266</span>
-<span class="k">const</span> <span class="n">byte</span> <span class="n">address1</span><span class="p">[]</span><span class="o">=</span><span class="s">"00001"</span><span class="p">;</span>
-<span class="kt">float</span> <span class="n">recvmpudata</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
 
-<span class="kt">int</span> <span class="n">IN1</span><span class="o">=</span><span class="n">D0</span><span class="p">;</span>
-<span class="kt">int</span> <span class="n">IN2</span><span class="o">=</span><span class="n">D1</span><span class="p">;</span>
-<span class="kt">int</span> <span class="n">IN3</span><span class="o">=</span><span class="n">D3</span><span class="p">;</span>
-<span class="kt">int</span> <span class="n">IN4</span><span class="o">=</span><span class="n">D8</span><span class="p">;</span>
+<p><code></p>
+<h1 id='include-7'>include<SPI.h></h1><h1 id='include-8'>include<RF24.h></h1><h1 id='include-9'>include<nRF24L01.h></h1>
+<p>RF24 radio(D4,D2); // CE and CSN of esp8266
+const byte address1[]=&quot;00001&quot;;
+float recvmpudata[2];</p>
 
-<span class="kt">int</span> <span class="n">ena</span><span class="o">=</span><span class="n">D9</span><span class="p">;</span>
-<span class="kt">int</span> <span class="n">enb</span><span class="o">=</span><span class="n">D10</span><span class="p">;</span>
+<p>int IN1=D0;
+int IN2=D1;
+int IN3=D3;
+int IN4=D8;</p>
 
-<span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
-  <span class="c1">// put your setup code here, to run once:</span>
+<p>int ena=D9;
+int enb=D10;</p>
 
-<span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
+<p>void setup() {
+  // put your setup code here, to run once:</p>
 
-<span class="n">pinMode</span><span class="p">(</span><span class="n">IN1</span><span class="p">,</span><span class="n">OUTPUT</span><span class="p">);</span>
-<span class="n">pinMode</span><span class="p">(</span><span class="n">IN2</span><span class="p">,</span><span class="n">OUTPUT</span><span class="p">);</span>
-<span class="n">pinMode</span><span class="p">(</span><span class="n">IN3</span><span class="p">,</span><span class="n">OUTPUT</span><span class="p">);</span>
-<span class="n">pinMode</span><span class="p">(</span><span class="n">IN4</span><span class="p">,</span><span class="n">OUTPUT</span><span class="p">);</span>
+<p>Serial.begin(115200);</p>
 
-<span class="n">pinMode</span><span class="p">(</span><span class="n">ena</span><span class="p">,</span><span class="n">OUTPUT</span><span class="p">);</span>
-<span class="n">pinMode</span><span class="p">(</span><span class="n">enb</span><span class="p">,</span><span class="n">OUTPUT</span><span class="p">);</span>
+<p>pinMode(IN1,OUTPUT);
+pinMode(IN2,OUTPUT);
+pinMode(IN3,OUTPUT);
+pinMode(IN4,OUTPUT);</p>
 
+<p>pinMode(ena,OUTPUT);
+pinMode(enb,OUTPUT);</p>
 
-<span class="n">radio</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span>
-<span class="n">radio</span><span class="p">.</span><span class="n">openReadingPipe</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">address1</span><span class="p">);</span><span class="c1">// reading pipe range 0 to 5</span>
-<span class="n">radio</span><span class="p">.</span><span class="n">setPALevel</span><span class="p">(</span><span class="n">RF24_PA_MIN</span><span class="p">);</span>
-<span class="n">radio</span><span class="p">.</span><span class="n">startListening</span><span class="p">();</span>
+<p>radio.begin();
+radio.openReadingPipe(0,address1);// reading pipe range 0 to 5
+radio.setPALevel(RF24_PA_MIN);
+radio.startListening();</p>
 
-<span class="p">}</span>
+<p>}</p>
 
-<span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span>
-  <span class="c1">// put your main code here, to run repeatedly:</span>
-<span class="k">if</span><span class="p">(</span><span class="n">radio</span><span class="p">.</span><span class="n">available</span><span class="p">()){</span>
-  <span class="n">radio</span><span class="p">.</span><span class="n">read</span><span class="p">(</span><span class="o">&amp;</span><span class="n">recvmpudata</span><span class="p">,</span><span class="k">sizeof</span><span class="p">(</span><span class="n">recvmpudata</span><span class="p">));</span>
+<p>void loop() {
+  // put your main code here, to run repeatedly:
+if(radio.available()){
+  radio.read(&amp;recvmpudata,sizeof(recvmpudata));</p>
 
-<span class="c1">//forward</span>
-<span class="k">if</span><span class="p">((</span><span class="n">recvmpudata</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="o">-</span><span class="mf">10.00</span><span class="p">)</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="n">recvmpudata</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="o">-</span><span class="mf">4.00</span><span class="p">)){</span>
-<span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"forward"</span><span class="p">);</span>
-<span class="n">digitalWrite</span><span class="p">(</span><span class="n">ena</span><span class="p">,</span><span class="n">HIGH</span><span class="p">);</span>
-<span class="n">digitalWrite</span><span class="p">(</span><span class="n">enb</span><span class="p">,</span><span class="n">HIGH</span><span class="p">);</span>
+<p>//forward
+if((recvmpudata[0] &gt;= -10.00)&amp;&amp;(recvmpudata[0] &lt;= -4.00)){
+Serial.println(&quot;forward&quot;);
+digitalWrite(ena,HIGH);
+digitalWrite(enb,HIGH);</p>
 
-<span class="n">digitalWrite</span><span class="p">(</span><span class="n">IN1</span><span class="p">,</span><span class="n">HIGH</span><span class="p">);</span>
-<span class="n">digitalWrite</span><span class="p">(</span><span class="n">IN2</span><span class="p">,</span><span class="n">LOW</span><span class="p">);</span>
-<span class="n">digitalWrite</span><span class="p">(</span><span class="n">IN3</span><span class="p">,</span><span class="n">HIGH</span><span class="p">);</span>
-<span class="n">digitalWrite</span><span class="p">(</span><span class="n">IN4</span><span class="p">,</span><span class="n">LOW</span><span class="p">);</span>
+<p>digitalWrite(IN1,HIGH);
+digitalWrite(IN2,LOW);
+digitalWrite(IN3,HIGH);
+digitalWrite(IN4,LOW);</p>
 
-<span class="n">delay</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span>
-<span class="p">}</span>
+<p>delay(20);
+}</p>
 
-<span class="c1">//backward</span>
-<span class="k">else</span> <span class="k">if</span><span class="p">((</span><span class="n">recvmpudata</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="o">+</span><span class="mf">4.00</span><span class="p">)</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="n">recvmpudata</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="o">+</span><span class="mf">10.00</span><span class="p">)){</span>
-<span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"backward"</span><span class="p">);</span>
-<span class="n">digitalWrite</span><span class="p">(</span><span class="n">ena</span><span class="p">,</span><span class="n">HIGH</span><span class="p">);</span>
-<span class="n">digitalWrite</span><span class="p">(</span><span class="n">enb</span><span class="p">,</span><span class="n">HIGH</span><span class="p">);</span>
+<p>//backward
+else if((recvmpudata[0] &gt;= +4.00)&amp;&amp;(recvmpudata[0] &lt;= +10.00)){
+Serial.println(&quot;backward&quot;);
+digitalWrite(ena,HIGH);
+digitalWrite(enb,HIGH);</p>
 
-<span class="n">digitalWrite</span><span class="p">(</span><span class="n">IN1</span><span class="p">,</span><span class="n">LOW</span><span class="p">);</span>
-<span class="n">digitalWrite</span><span class="p">(</span><span class="n">IN2</span><span class="p">,</span><span class="n">HIGH</span><span class="p">);</span>
-<span class="n">digitalWrite</span><span class="p">(</span><span class="n">IN3</span><span class="p">,</span><span class="n">LOW</span><span class="p">);</span>
-<span class="n">digitalWrite</span><span class="p">(</span><span class="n">IN4</span><span class="p">,</span><span class="n">HIGH</span><span class="p">);</span>
+<p>digitalWrite(IN1,LOW);
+digitalWrite(IN2,HIGH);
+digitalWrite(IN3,LOW);
+digitalWrite(IN4,HIGH);</p>
 
-<span class="n">delay</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span>
-<span class="p">}</span>
+<p>delay(20);
+}</p>
 
-<span class="c1">//left</span>
-<span class="k">else</span> <span class="k">if</span><span class="p">((</span><span class="n">recvmpudata</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="o">-</span><span class="mf">10.00</span><span class="p">)</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="n">recvmpudata</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="o">-</span><span class="mf">4.00</span><span class="p">)){</span>
-<span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"left"</span><span class="p">);</span>
-<span class="n">digitalWrite</span><span class="p">(</span><span class="n">ena</span><span class="p">,</span><span class="n">HIGH</span><span class="p">);</span>
-<span class="n">digitalWrite</span><span class="p">(</span><span class="n">enb</span><span class="p">,</span><span class="n">HIGH</span><span class="p">);</span>
+<p>//left
+else if((recvmpudata[1] &gt;= -10.00)&amp;&amp;(recvmpudata[1] &lt;= -4.00)){
+Serial.println(&quot;left&quot;);
+digitalWrite(ena,HIGH);
+digitalWrite(enb,HIGH);</p>
 
-<span class="n">digitalWrite</span><span class="p">(</span><span class="n">IN1</span><span class="p">,</span><span class="n">LOW</span><span class="p">);</span>
-<span class="n">digitalWrite</span><span class="p">(</span><span class="n">IN2</span><span class="p">,</span><span class="n">LOW</span><span class="p">);</span>
-<span class="n">digitalWrite</span><span class="p">(</span><span class="n">IN3</span><span class="p">,</span><span class="n">HIGH</span><span class="p">);</span>
-<span class="n">digitalWrite</span><span class="p">(</span><span class="n">IN4</span><span class="p">,</span><span class="n">LOW</span><span class="p">);</span>
+<p>digitalWrite(IN1,LOW);
+digitalWrite(IN2,LOW);
+digitalWrite(IN3,HIGH);
+digitalWrite(IN4,LOW);</p>
 
-<span class="n">delay</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span>
-<span class="p">}</span>
+<p>delay(20);
+}</p>
 
-<span class="c1">//right</span>
-<span class="k">else</span> <span class="k">if</span><span class="p">((</span><span class="n">recvmpudata</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="o">+</span><span class="mf">4.00</span><span class="p">)</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="n">recvmpudata</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="o">+</span><span class="mf">10.00</span><span class="p">)){</span>
-<span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"right"</span><span class="p">);</span>
-<span class="n">digitalWrite</span><span class="p">(</span><span class="n">ena</span><span class="p">,</span><span class="n">HIGH</span><span class="p">);</span>
-<span class="n">digitalWrite</span><span class="p">(</span><span class="n">enb</span><span class="p">,</span><span class="n">HIGH</span><span class="p">);</span>
+<p>//right
+else if((recvmpudata[1] &gt;= +4.00)&amp;&amp;(recvmpudata[1] &lt;= +10.00)){
+Serial.println(&quot;right&quot;);
+digitalWrite(ena,HIGH);
+digitalWrite(enb,HIGH);</p>
 
-<span class="n">digitalWrite</span><span class="p">(</span><span class="n">IN1</span><span class="p">,</span><span class="n">HIGH</span><span class="p">);</span>
-<span class="n">digitalWrite</span><span class="p">(</span><span class="n">IN2</span><span class="p">,</span><span class="n">LOW</span><span class="p">);</span>
-<span class="n">digitalWrite</span><span class="p">(</span><span class="n">IN3</span><span class="p">,</span><span class="n">LOW</span><span class="p">);</span>
-<span class="n">digitalWrite</span><span class="p">(</span><span class="n">IN4</span><span class="p">,</span><span class="n">LOW</span><span class="p">);</span>
+<p>digitalWrite(IN1,HIGH);
+digitalWrite(IN2,LOW);
+digitalWrite(IN3,LOW);
+digitalWrite(IN4,LOW);</p>
 
-<span class="n">delay</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span>
-<span class="p">}</span>
+<p>delay(20);
+}</p>
 
-<span class="c1">//stop</span>
-<span class="k">else</span> <span class="k">if</span><span class="p">((</span><span class="n">recvmpudata</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="o">-</span><span class="mf">5.00</span><span class="p">)</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="n">recvmpudata</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="o">+</span><span class="mf">5.00</span><span class="p">)){</span>
-<span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"stop"</span><span class="p">);</span>
-<span class="n">digitalWrite</span><span class="p">(</span><span class="n">ena</span><span class="p">,</span><span class="n">LOW</span><span class="p">);</span>
-<span class="n">digitalWrite</span><span class="p">(</span><span class="n">enb</span><span class="p">,</span><span class="n">LOW</span><span class="p">);</span>
+<p>//stop
+else if((recvmpudata[0] &gt;= -5.00)&amp;&amp;(recvmpudata[0] &lt;= +5.00)){
+Serial.println(&quot;stop&quot;);
+digitalWrite(ena,LOW);
+digitalWrite(enb,LOW);</p>
 
-<span class="n">digitalWrite</span><span class="p">(</span><span class="n">IN1</span><span class="p">,</span><span class="n">LOW</span><span class="p">);</span>
-<span class="n">digitalWrite</span><span class="p">(</span><span class="n">IN2</span><span class="p">,</span><span class="n">LOW</span><span class="p">);</span>
-<span class="n">digitalWrite</span><span class="p">(</span><span class="n">IN3</span><span class="p">,</span><span class="n">LOW</span><span class="p">);</span>
-<span class="n">digitalWrite</span><span class="p">(</span><span class="n">IN4</span><span class="p">,</span><span class="n">LOW</span><span class="p">);</span>
+<p>digitalWrite(IN1,LOW);
+digitalWrite(IN2,LOW);
+digitalWrite(IN3,LOW);
+digitalWrite(IN4,LOW);</p>
 
-<span class="n">delay</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span>
-<span class="p">}</span>
-<span class="k">else</span><span class="p">{</span>
-  <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"!!!!!!!!!!Wrong Input or Output!!!!!!!!!!"</span><span class="p">);</span>
-<span class="p">}</span>
-<span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
+<p>delay(20);
+}
+else{
+  Serial.println(&quot;!!!!!!!!!!Wrong Input or Output!!!!!!!!!!&quot;);
+}
+}
+}
+</code></p>
+
       </div>
       <div class="dark-box">
       </div>
