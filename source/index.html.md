@@ -11,7 +11,7 @@ MY name is Priyam Sarkar
 
 Hello and welcome to my free coding site.
 
-# My Projec
+# My Project
 ## Gestokar
 * #### Abstract
 The proposed work presents a Hand Gesture Controlled car which can be controlled by simple
@@ -122,7 +122,7 @@ Based on the input, the car/machine will behave as follows:
 
 * #### Transmitter code
 
-```C++
+```cpp
 #include<SPI.h>
 #include<RF24.h>
 #include<nrf24L01.h>
@@ -273,7 +273,7 @@ radio.write(&sndmpu,sizeof(sndmpu));
 
 *  #### Recevier Code
 
-```C++
+```cpp
 #include<SPI.h>
 #include<RF24.h>
 #include<nRF24L01.h>
