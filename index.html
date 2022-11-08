@@ -5,10 +5,6 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <meta
-            name="Priyam Sarkar"
-            content="OP notes"
-        >
     <title>Priyam Sarkar</title>
 
     <style media="screen">
@@ -288,14 +284,11 @@
     </style>
     <link href="stylesheets/screen-c9d8fa83.css" rel="stylesheet" media="screen" />
     <link href="stylesheets/print-953e3353.css" rel="stylesheet" media="print" />
-      <script src="javascripts/all-b12a2749.js"></script>
+      <script src="javascripts/all_nosearch-18c3ed8e.js"></script>
 
-    <script>
-      $(function() { setupCodeCopy(); });
-    </script>
   </head>
 
-  <body class="index" data-languages="[&quot;shell&quot;,&quot;ruby&quot;,&quot;python&quot;,&quot;javascript&quot;]">
+  <body class="index" data-languages="[]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -304,16 +297,6 @@
     </a>
     <div class="toc-wrapper">
       <img src="images/logo-1e815a84.png" class="logo" alt="" />
-        <div class="lang-selector">
-              <a href="#" data-language-name="shell">shell</a>
-              <a href="#" data-language-name="ruby">ruby</a>
-              <a href="#" data-language-name="python">python</a>
-              <a href="#" data-language-name="javascript">javascript</a>
-        </div>
-        <div class="search">
-          <input type="text" class="search" id="input-search" placeholder="Search">
-        </div>
-        <ul class="search-results"></ul>
       <ul id="toc" class="toc-list-h1">
           <li>
             <a href="#op-in-the-chat-box" class="toc-h1 toc-link" data-title="OP IN THE CHAT BOX">OP IN THE CHAT BOX</a>
@@ -329,22 +312,13 @@
                   </li>
               </ul>
           </li>
-          <li>
-            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
-          </li>
       </ul>
-        <ul class="toc-footer">
-            <li><a href='#'>Sign Up for a Developer Key</a></li>
-            <li><a href='https://github.com/slatedocs/slate'>Documentation Powered by Slate</a></li>
-        </ul>
     </div>
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='op-in-the-chat-box'>OP IN THE CHAT BOX</h1>
 <p>MY name is Priyam Sarkar</p>
-
-<p><bgcolor = cyan></p>
 <h1 id='welcome'>😎Welcome</h1>
 <p>Hello and welcome to my free coding site.</p>
 <h1 id='my-projec'>My Projec</h1><h2 id='gestokar'>Gestokar</h2>
@@ -709,291 +683,8 @@ Based on the input, the car/machine will behave as follows:
 <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>//
-//
-//
-//This example API documentation page was created with <a href="https://github.com/slatedocs/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&#39;s documentation.
-//
-//# Authentication
-//
-//&gt; To authorize, use this code:
-//
-//<code>ruby
-//require &#39;kittn&#39;
-//
-//api = Kittn::APIClient.authorize!(&#39;meowmeowmeow&#39;)
-//</code>
-//
-//<code>python
-//import kittn
-//
-//api = kittn.authorize(&#39;meowmeowmeow&#39;)
-//</code>
-//
-//<code>shell
-//# With shell, you can just pass the correct header with each request
-//curl &quot;api_endpoint_here&quot; \
-//  -H &quot;Authorization: meowmeowmeow&quot;
-//</code>
-//
-//<code>javascript
-//const kittn = require(&#39;kittn&#39;);
-//
-//let api = kittn.authorize(&#39;meowmeowmeow&#39;);
-//</code>
-//
-//&gt; Make sure to replace <code>meowmeowmeow</code> with your API key.
-//
-//Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers">developer portal</a>.
-//
-//Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:
-//
-//<code>Authorization: meowmeowmeow</code>
-//
-//<aside class="notice">
-//You must replace <code>meowmeowmeow</code> with your personal API key.
-//</aside>
-//
-//# Kittens
-//
-//## Get All Kittens
-//
-//<code>ruby
-//require &#39;kittn&#39;
-//
-//api = Kittn::APIClient.authorize!(&#39;meowmeowmeow&#39;)
-//api.kittens.get
-//</code>
-//
-//<code>python
-//import kittn
-//
-//api = kittn.authorize(&#39;meowmeowmeow&#39;)
-//api.kittens.get()
-//</code>
-//
-//<code>shell
-//curl &quot;http://example.com/api/kittens&quot; \
-//  -H &quot;Authorization: meowmeowmeow&quot;
-//</code>
-//
-//<code>javascript
-//const kittn = require(&#39;kittn&#39;);
-//
-//let api = kittn.authorize(&#39;meowmeowmeow&#39;);
-//let kittens = api.kittens.get();
-//</code>
-//
-//&gt; The above command returns JSON structured like this:
-//
-//<code>json
-//[
-//  {
-//    &quot;id&quot;: 1,
-//    &quot;name&quot;: &quot;Fluffums&quot;,
-//    &quot;breed&quot;: &quot;calico&quot;,
-//    &quot;fluffiness&quot;: 6,
-//    &quot;cuteness&quot;: 7
-//  },
-//  {
-//    &quot;id&quot;: 2,
-//    &quot;name&quot;: &quot;Max&quot;,
-//    &quot;breed&quot;: &quot;unknown&quot;,
-//    &quot;fluffiness&quot;: 5,
-//    &quot;cuteness&quot;: 10
-//  }
-//]
-//</code>
-//
-//This endpoint retrieves all kittens.
-//
-//### HTTP Request
-//
-//<code>GET http://example.com/api/kittens</code>
-//
-//### Query Parameters
-//
-//Parameter | Default | Description
-//--------- | ------- | -----------
-//include_cats | false | If set to true, the result will also include cats.
-//available | true | If set to false, the result will include kittens that have already been adopted.
-//
-//<aside class="success">
-//Remember — a happy kitten is an authenticated kitten!
-//</aside>
-//
-//## Get a Specific Kitten
-//
-//<code>ruby
-//require &#39;kittn&#39;
-//
-//api = Kittn::APIClient.authorize!(&#39;meowmeowmeow&#39;)
-//api.kittens.get(2)
-//</code>
-//
-//<code>python
-//import kittn
-//
-//api = kittn.authorize(&#39;meowmeowmeow&#39;)
-//api.kittens.get(2)
-//</code>
-//
-//<code>shell
-//curl &quot;http://example.com/api/kittens/2&quot; \
-//  -H &quot;Authorization: meowmeowmeow&quot;
-//</code>
-//
-//<code>javascript
-//const kittn = require(&#39;kittn&#39;);
-//
-//let api = kittn.authorize(&#39;meowmeowmeow&#39;);
-//let max = api.kittens.get(2);
-//</code>
-//
-//&gt; The above command returns JSON structured like this:
-//
-//<code>json
-//{
-//  &quot;id&quot;: 2,
-//  &quot;name&quot;: &quot;Max&quot;,
-//  &quot;breed&quot;: &quot;unknown&quot;,
-//  &quot;fluffiness&quot;: 5,
-//  &quot;cuteness&quot;: 10
-//}
-//</code>
-//
-//This endpoint retrieves a specific kitten.
-//
-//<aside class="warning">Inside HTML code blocks like this one, you can&#39;t use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
-//
-//### HTTP Request
-//
-//<code>GET http://example.com/kittens/&lt;ID&gt;</code>
-//
-//### URL Parameters
-//
-//Parameter | Description
-//--------- | -----------
-//ID | The ID of the kitten to retrieve
-//
-//## Delete a Specific Kitten
-//
-//<code>ruby
-//require &#39;kittn&#39;
-//
-//api = Kittn::APIClient.authorize!(&#39;meowmeowmeow&#39;)
-//api.kittens.delete(2)
-//</code>
-//
-//<code>python
-//import kittn
-//
-//api = kittn.authorize(&#39;meowmeowmeow&#39;)
-//api.kittens.delete(2)
-//</code>
-//
-//<code>shell
-//curl &quot;http://example.com/api/kittens/2&quot; \
-//  -X DELETE \
-//  -H &quot;Authorization: meowmeowmeow&quot;
-//</code>
-//
-//<code>javascript
-//const kittn = require(&#39;kittn&#39;);
-//
-//let api = kittn.authorize(&#39;meowmeowmeow&#39;);
-//let max = api.kittens.delete(2);
-//</code>
-//
-//&gt; The above command returns JSON structured like this:
-//
-//<code>json
-//{
-//  &quot;id&quot;: 2,
-//  &quot;deleted&quot; : &quot;:(&quot;
-//}
-//</code>
-//
-//This endpoint deletes a specific kitten.
-//
-//### HTTP Request
-//
-//<code>DELETE http://example.com/kittens/&lt;ID&gt;</code>
-//
-//### URL Parameters
-//
-//Parameter | Description
-//--------- | -----------
-//ID | The ID of the kitten to delete
-//
-//</p>
-<h1 id='errors'>Errors</h1>
-<aside class="notice">
-This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
-</aside>
-
-<p>The Kittn API uses the following error codes:</p>
-
-<table><thead>
-<tr>
-<th>Error Code</th>
-<th>Meaning</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>400</td>
-<td>Bad Request -- Your request is invalid.</td>
-</tr>
-<tr>
-<td>401</td>
-<td>Unauthorized -- Your API key is wrong.</td>
-</tr>
-<tr>
-<td>403</td>
-<td>Forbidden -- The kitten requested is hidden for administrators only.</td>
-</tr>
-<tr>
-<td>404</td>
-<td>Not Found -- The specified kitten could not be found.</td>
-</tr>
-<tr>
-<td>405</td>
-<td>Method Not Allowed -- You tried to access a kitten with an invalid method.</td>
-</tr>
-<tr>
-<td>406</td>
-<td>Not Acceptable -- You requested a format that isn&#39;t json.</td>
-</tr>
-<tr>
-<td>410</td>
-<td>Gone -- The kitten requested has been removed from our servers.</td>
-</tr>
-<tr>
-<td>418</td>
-<td>I&#39;m a teapot.</td>
-</tr>
-<tr>
-<td>429</td>
-<td>Too Many Requests -- You&#39;re requesting too many kittens! Slow down!</td>
-</tr>
-<tr>
-<td>500</td>
-<td>Internal Server Error -- We had a problem with our server. Try again later.</td>
-</tr>
-<tr>
-<td>503</td>
-<td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
-</tr>
-</tbody></table>
-
       </div>
       <div class="dark-box">
-          <div class="lang-selector">
-                <a href="#" data-language-name="shell">shell</a>
-                <a href="#" data-language-name="ruby">ruby</a>
-                <a href="#" data-language-name="python">python</a>
-                <a href="#" data-language-name="javascript">javascript</a>
-          </div>
       </div>
     </div>
   </body>
